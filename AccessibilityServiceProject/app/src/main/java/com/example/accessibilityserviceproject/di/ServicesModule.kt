@@ -13,17 +13,17 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object ServicesModule {
 
-    @Provides
-    @Singleton
-    fun provideUserService(retrofit: Retrofit): RequestService {
-        return retrofit.create(RequestService::class.java)
-    }
-
-    @Provides
-    @Singleton
-    fun provideServiceManager(userService: RequestService): ServiceManager {
-        return ServiceManager(userService)
-    }
+//    @Provides
+//    @Singleton
+//    fun provideUserService(retrofit: Retrofit): RequestService {
+//        return retrofit.create(RequestService::class.java)
+//    }
+//
+//    @Provides
+//    @Singleton
+//    fun provideServiceManager(userService: RequestService): ServiceManager {
+//        return ServiceManager(userService)
+//    }
 
 
 }
