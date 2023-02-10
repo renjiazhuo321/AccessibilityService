@@ -1,0 +1,7 @@
+package com.example.accessibilityserviceproject.repository
+
+interface IRepository
+
+interface IRemoteDataSource
+
+interface ILocalDataSource

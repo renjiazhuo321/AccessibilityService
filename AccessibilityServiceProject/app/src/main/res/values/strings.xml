@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">个人助手</string>
+    <string name="hint">开启该权限才能正常使用自动触控功能</string>
+    <string name="grab_tickets_str">抢票服务</string>
+    <string name="jd_rush_str">京东秒杀类服务</string>
+    <string name="emd_automatic_str">ems自动出库</string>
+    <string name="trips_str">车次</string>
+</resources>
