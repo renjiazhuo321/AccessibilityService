@@ -1,3 +1,5 @@
+package com.example.accessibilityserviceproject.http
+
 import com.example.accessibilityserviceproject.http.NewBaseResponse
 import okhttp3.RequestBody
 import retrofit2.Response

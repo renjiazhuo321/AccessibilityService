@@ -11,7 +11,7 @@ class GrabTicketRepository @Inject constructor( familyRemoteData: FamilyRemoteDa
 
 
 class FamilyRemoteDataSource @Inject constructor(
-//    private val serviceManager: ServiceManager
+    private val serviceManager: ServiceManager
 ) : IRemoteDataSource {
 
 }
