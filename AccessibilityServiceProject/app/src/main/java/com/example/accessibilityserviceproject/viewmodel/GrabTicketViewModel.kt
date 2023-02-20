@@ -1,6 +1,5 @@
 package com.example.accessibilityserviceproject.viewmodel
 
-import android.widget.EditText
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.lifecycle.LiveData
@@ -12,8 +11,6 @@ import com.example.accessibilityserviceproject.util.ext.postNext
 import com.example.accessibilityserviceproject.viewstate.GrabDataListState
 import com.example.accessibilityserviceproject.viewstate.TripListState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.android.synthetic.main.activity_grab_tickets.*
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject

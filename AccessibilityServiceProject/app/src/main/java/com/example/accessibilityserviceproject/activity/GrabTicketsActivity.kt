@@ -1,21 +1,15 @@
 package com.example.accessibilityserviceproject.activity
 
 import android.os.Bundle
-import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.datastore.preferences.core.edit
-import androidx.datastore.preferences.core.stringSetPreferencesKey
-import com.example.accessibilityserviceproject.DataStore.dataStore
 import com.example.accessibilityserviceproject.R
 import com.example.accessibilityserviceproject.util.DensityUtil
 import com.example.accessibilityserviceproject.util.ext.observe
 import com.example.accessibilityserviceproject.viewmodel.GrabTicketViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_grab_tickets.*
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.*
 
 //火车票配置页面
 @AndroidEntryPoint
@@ -35,19 +29,19 @@ class GrabTicketsActivity : BaseActivity() {
     private fun binds() {
         observe(mViewModel.grabDataListState) { state ->
             if (state.data != null) {
-                val data = state.data as Set<String>
+                val data = state.data as Set<*>
                 for (i in data.indices) {
                     val nameEditText = name_cl.getChildAt(i) as EditText
-                    nameEditText.setText(data.toList()[i])
+                    nameEditText.setText(data.toList()[i] as String)
                 }
             }
         }
         observe(mViewModel.tripListState) { state ->
             if (state.data != null) {
-                val data = state.data as Set<String>
-                for (i in 0 until data!!.size) {
+                val data = state.data as Set<*>
+                for (i in data.indices) {
                     val tripsEditText = trips_ll.getChildAt(i) as EditText
-                    tripsEditText.setText(data.toList()[i])
+                    tripsEditText.setText(data.toList()[i] as String)
                 }
             }
         }

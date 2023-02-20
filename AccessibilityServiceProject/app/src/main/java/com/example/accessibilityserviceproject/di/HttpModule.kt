@@ -23,7 +23,7 @@ object HttpModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("xxx")
+            .baseUrl("https://www.baidu.com")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -44,7 +44,6 @@ object HttpModule {
                     level = when (BuildConfig.DEBUG) {
                         true -> HttpLoggingInterceptor.Level.BODY
                         false -> HttpLoggingInterceptor.Level.NONE
-                        false -> HttpLoggingInterceptor.Level.BODY
                     }
                 }
             )
